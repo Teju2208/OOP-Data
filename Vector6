@@ -1,0 +1,43 @@
+#include<iostream>
+#include<vector>
+#include<algorithm>
+using namespace std;
+class item
+{
+	public:
+		int code,qty;
+		char name[10];
+		float cost;
+		
+	void insert()
+	{
+		cout<<"\n New item";
+		cout<<"\n Enter item code";
+		cin>>code;
+		cout<<"\n Enter item name";
+		cin>>name;
+		cout<<"\n Enter item cost";
+		cin>>cost;
+		cout<<"\n Enter item quantity";
+		cin>>qty;
+	}
+};
+int main()
+{
+	vector<item>v;
+	item i1;
+	i1.insert();
+	v.push_back(i1);
+	
+	item i2;
+	i2.insert();
+	v.push_back(i2);
+	
+	cout<<"\n Size of vector="<<v.size();
+	cout<<"\n printing item vector\n";
+	for(int i=0;i<v.size();i++)
+	{
+		cout<<v[i].code<<"\t"<<v[i].name<<"\t"<<v[i].cost<<"\t"<<v[i].qty;
+		cout<<"\n";
+	}
+}
